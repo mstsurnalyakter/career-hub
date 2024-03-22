@@ -1,14 +1,13 @@
-
-import AppliedJobsBanner from '../components/AppliedJobsBanner'
-import AppliedJobsCards from '../components/AppliedJobsCards'
+import Banner from "../components/Banner";
+import AppliedJobsCards from "../components/AppliedJobsCards";
 
 const AppliedJobs = () => {
   return (
     <div>
-        <AppliedJobsBanner/>
-        <AppliedJobsCards/>
+      <Banner title={"Applied Jobs"} />
+      <AppliedJobsCards />
     </div>
-  )
-}
+  );
+};
 
-export default AppliedJobs
+export default AppliedJobs;

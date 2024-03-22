@@ -1,7 +1,7 @@
-import accounts from "../assets/icons/accounts.png";
 import { CiLocationOn } from "react-icons/ci";
 import { AiOutlineDollar } from "react-icons/ai";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const FeaturedJobs = () => {
   const [jobs,setJobs] = useState([]);
@@ -19,7 +19,6 @@ const FeaturedJobs = () => {
     loadData();
   },[])
 
-  console.log(jobs);
 
 
   return (
@@ -74,20 +73,20 @@ const FeaturedJobs = () => {
                         type="button"
                         className="px-4 py-2 font-semibold border border-[#7E90FE] border-dashed rounded text-[#7E90FE]"
                       >
-                       {remote_or_onsite}
+                        {remote_or_onsite}
                       </button>
                       <button
                         type="button"
                         className="px-4 py-2 font-semibold border border-[#7E90FE] border-dashed rounded text-[#7E90FE]"
                       >
-                       {job_type}
+                        {job_type}
                       </button>
                     </div>
                     <div className="flex gap-6 mb-6">
                       <p className="flex items-center gap-2">
                         <CiLocationOn />
                         <span className="text-[#757575] text-xl font-semibold">
-                         {location}
+                          {location}
                         </span>
                       </p>
                       <p className="flex items-center gap-2">
@@ -98,9 +97,13 @@ const FeaturedJobs = () => {
                       </p>
                     </div>
                     <div>
-                      <button className="px-4 py-3 text-xl font-semibold text-center text-white transition duration-300 rounded-lg hover:from-purple-600 hover:to-[#7E90FE] ease bg-gradient-to-br from-[#7E90FE] to-purple-700 md:w-auto">
+                      <Link
+                        to={`/${id}`}
+                        job={job}
+                        className="px-4 py-3 text-xl font-semibold text-center text-white transition duration-300 rounded-lg hover:from-purple-600 hover:to-[#7E90FE] ease bg-gradient-to-br from-[#7E90FE] to-purple-700 md:w-auto"
+                      >
                         View Details
-                      </button>
+                      </Link>
                     </div>
                   </div>
                 </article>
@@ -109,14 +112,14 @@ const FeaturedJobs = () => {
           }
         </div>
       </div>
-      <div className="flex items-center justify-center">
+      {/* <div className="flex items-center justify-center">
         <button
           href="#_"
           className="px-4 py-3 text-xl font-semibold text-center text-white transition duration-300 rounded-lg hover:from-purple-600 hover:to-[#7E90FE] ease bg-gradient-to-br from-[#7E90FE] to-purple-700 md:w-auto"
         >
           See All Jobs
         </button>
-      </div>
+      </div> */}
     </section>
   );
 };
