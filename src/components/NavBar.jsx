@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 
@@ -13,6 +13,12 @@ const NavBar = () => {
       setTheme("light");
     }
   }
+
+  useEffect(()=>{
+    localStorage.setItem("theme",theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme",localTheme)
+  },[theme])
 
 
   return (
