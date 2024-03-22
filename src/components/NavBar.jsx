@@ -22,7 +22,7 @@ const NavBar = () => {
 
 
   return (
-    <div className="bg-base-100 shadow-xl fixed z-10 w-full">
+    <div className="bg-gradient-to-r from-blue-50 to-purple-50 fixed z-10 w-full">
       <div className="navbar container  mx-auto p-6 lg:px-8 xl:px-10">
         <div className="navbar-start">
           <div className="dropdown">

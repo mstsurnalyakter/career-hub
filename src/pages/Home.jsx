@@ -1,8 +1,9 @@
+import Hero from "../components/Hero";
 
 const Home = () => {
   return (
-    <div className="min-h-[calc(100vh-450px)] flex items-center justify-center">
-      Home
+    <div className="min-h-[calc(100vh-450px)]">
+     <Hero/>
     </div>
   );
 }
