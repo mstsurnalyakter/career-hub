@@ -4,8 +4,8 @@ import { AiOutlineDollar } from "react-icons/ai";
 
 const FeaturedJobs = () => {
   return (
-    <section className="py-6 sm:py-12">
-      <div className="container p-6 mx-auto space-y-8">
+    <section className="py-6 sm:py-12 mb-32">
+      <div className="container p-6 mx-auto space-y-8 mb-10">
         <div className="space-y-2 text-center">
           <h2 className="text-3xl font-bold">Featured Jobs</h2>
           <p className="font-serif text-sm text-gray-400">
@@ -22,7 +22,9 @@ const FeaturedJobs = () => {
               <h3 className="flex-1 text-2xl mb-2 font-extrabold text-[#474747] leading-snug">
                 Technical Database Engineer
               </h3>
-              <p className="text-[#757575] text-xl font-semibold mb-4">Google LLC</p>
+              <p className="text-[#757575] text-xl font-semibold mb-4">
+                Google LLC
+              </p>
               <div className="space-x-3 mb-4">
                 <button
                   type="button"
@@ -92,6 +94,14 @@ const FeaturedJobs = () => {
             </div>
           </article>
         </div>
+      </div>
+      <div className="flex items-center justify-center">
+        <button
+          href="#_"
+          className="px-4 py-3 text-xl font-semibold text-center text-white transition duration-300 rounded-lg hover:from-purple-600 hover:to-[#7E90FE] ease bg-gradient-to-br from-[#7E90FE] to-purple-700 md:w-auto"
+        >
+          See All Jobs
+        </button>
       </div>
     </section>
   );
