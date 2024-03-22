@@ -58,15 +58,16 @@ const NavBar = () => {
                 className={({ isActive }) =>
                   isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
                 }
-                to={"/blogs"}
+                to={"/jobs"}
               >
-                Statistics
+                {/* Statistics */}
+                Jobs
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
                   isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
                 }
-                to={"/bookmarks"}
+                to={"/applied"}
               >
                 Applied Jobs
               </NavLink>
@@ -74,9 +75,17 @@ const NavBar = () => {
                 className={({ isActive }) =>
                   isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
                 }
-                to={"/bookmarks"}
+                to={"/blogs"}
               >
-                Blog
+                Blogs
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
+                }
+                to={"/statistics"}
+              >
+                Statistics
               </NavLink>
               <NavLink
                 href="#_"
@@ -107,15 +116,15 @@ const NavBar = () => {
               className={({ isActive }) =>
                 isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
               }
-              to={"/blogs"}
+              to={"/jobs"}
             >
-              Statistics
+              Jobs
             </NavLink>
             <NavLink
               className={({ isActive }) =>
                 isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
               }
-              to={"/bookmarks"}
+              to={"/applied"}
             >
               Applied Jobs
             </NavLink>
@@ -123,9 +132,17 @@ const NavBar = () => {
               className={({ isActive }) =>
                 isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
               }
-              to={"/bookmarks"}
+              to={"/statistics"}
             >
-              Blog
+              Statistics
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
+              }
+              to={"/blogs"}
+            >
+              Blogs
             </NavLink>
           </ul>
         </div>
