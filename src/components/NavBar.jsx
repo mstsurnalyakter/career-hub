@@ -44,11 +44,11 @@ const NavBar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 text-xl  shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-4 space-y-3 text-xl  shadow bg-base-100 rounded-box w-52 "
             >
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "text-primary font-bold underline" : "font-bold"
+                  isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
                 }
                 to={"/"}
               >
@@ -56,24 +56,40 @@ const NavBar = () => {
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "text-primary font-bold underline" : "font-bold"
+                  isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
                 }
                 to={"/blogs"}
               >
-                Blogs
+                Statistics
               </NavLink>
               <NavLink
                 className={({ isActive }) =>
-                  isActive ? "text-primary font-bold underline" : "font-bold"
+                  isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
                 }
                 to={"/bookmarks"}
               >
-                Bookmarks
+                Applied Jobs
+              </NavLink>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
+                }
+                to={"/bookmarks"}
+              >
+                Blog
+              </NavLink>
+              <NavLink
+                href="#_"
+                className="px-4 py-3 text-xl font-semibold text-center text-white transition duration-300 rounded-lg hover:from-purple-600 hover:to-[#7E90FE] ease bg-gradient-to-br from-[#7E90FE] to-purple-700 md:w-auto"
+              >
+                Star Applying
               </NavLink>
             </ul>
           </div>
           <a className="text-3xl text-secondary font-bold lg:text-4xl gap-0">
-            Learn<span className="text-primary">Hub</span>
+            <span className="bg-gradient-to-r from-primary via-purple-600 to-pink-300 bg-300% text-transparent bg-clip-text animate-gradient">
+              CareerHub
+            </span>
           </a>
         </div>
         {/*  */}
@@ -81,7 +97,7 @@ const NavBar = () => {
           <ul className="menu space-x-4 font-bold text-xl menu-horizontal px-1">
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold underline" : "font-bold"
+                isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
               }
               to={"/"}
             >
@@ -89,52 +105,38 @@ const NavBar = () => {
             </NavLink>
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold underline" : "font-bold"
+                isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
               }
               to={"/blogs"}
             >
-              Blogs
+              Statistics
             </NavLink>
             <NavLink
               className={({ isActive }) =>
-                isActive ? "text-primary font-bold underline" : "font-bold"
+                isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
               }
               to={"/bookmarks"}
             >
-              Bookmarks
+              Applied Jobs
+            </NavLink>
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "text-[#9873FF] font-bold underline" : "font-bold"
+              }
+              to={"/bookmarks"}
+            >
+              Blog
             </NavLink>
           </ul>
         </div>
         {/*  */}
         <div className="navbar-end">
-          {/* <div className="navbar-center hidden lg:flex">
-            <ul className="menu space-x-4 font-bold text-xl menu-horizontal px-1">
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "text-primary font-bold underline" : "font-bold"
-                }
-                to={"/"}
-              >
-                Home
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "text-primary font-bold underline" : "font-bold"
-                }
-                to={"/blogs"}
-              >
-                Blogs
-              </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "text-primary font-bold underline" : "font-bold"
-                }
-                to={"/bookmarks"}
-              >
-                Bookmarks
-              </NavLink>
-            </ul>
-          </div> */}
+          <a
+            href="#_"
+            className="px-4 hidden lg:flex py-3 text-xl font-semibold text-center text-white transition duration-300 rounded-lg hover:from-purple-600 hover:to-[#7E90FE] ease bg-gradient-to-br from-[#7E90FE] to-purple-700 md:w-auto"
+          >
+            Star Applying
+          </a>
           {/* theme controller start*/}
           <label className="flex cursor-pointer ml-1 gap-2">
             <svg
