@@ -10,7 +10,10 @@ const FeaturedJobs = () => {
   useEffect(()=>{
     const loadData = async () =>{
       try {
-        const res = await fetch("./data/jobs.json")
+        const res = await fetch("./data/jobs.json");
+        if (!res.ok) {
+          throw new Error("Fail to data fetch!")
+        }
         const data = await res.json();
         setJobs(data);
       } catch (error) {

@@ -11,14 +11,17 @@ import { AiOutlineDollar } from "react-icons/ai";
 import { FaPhoneAlt, FaRegCalendarAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { CiLocationOn } from "react-icons/ci";
-// import { FaPhoneAlt } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+ import "react-toastify/dist/ReactToastify.min.css";
+import { saveJobApplication } from "../utility/localStorage";
+
 
 const JobDetails = () => {
   const jobs = useLoaderData();
   const {id} = useParams();
   const idInt = parseInt(id)
   const job = jobs.find(job=> job.id === idInt);
-  console.log(job);
+
 
   const {
     job_title,
@@ -31,16 +34,22 @@ const JobDetails = () => {
   } = job;
 
   const { phone, email, address } = job.contact_information;
-  console.log(phone);
+
+  const handleApplyJob = () =>{
+    saveJobApplication(idInt)
+    toast("You have applied successfully!");
+
+  }
 
 
   return (
     <section className="min-h-screen">
       <Banner title={"Job Details"} />
-      <div className="border  grid grid-cols-1 lg:grid-cols-3 gap-6 container mx-auto p-6 lg:px-8 xl:px-10">
-        <div className="col-span-2 space-y-6">
-          <p>
-            <b>Job Description:</b>
+      <div className="grid grid-cols-1 -mt-16 mb-10 lg:grid-cols-3 gap-6 container mx-auto p-6 lg:px-8 xl:px-10">
+
+        <div className="col-span-2 space-y-8">
+          <p className="text-[#757575] font-medium">
+            <b className="text-[#1A1919] font-extrabold">Job Description:</b>
             {job_description}
           </p>
           <div>
@@ -115,6 +124,7 @@ const JobDetails = () => {
           >
             <div className="flex w-full">
               <button
+                onClick={handleApplyJob}
                 href="#_"
                 className="px-4 py-3 text-xl flex-grow font-semibold text-center text-white transition duration-300 rounded-lg hover:from-purple-600 hover:to-[#7E90FE] ease bg-gradient-to-br from-[#7E90FE] to-purple-700 md:w-auto"
               >
@@ -124,6 +134,7 @@ const JobDetails = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </section>
   );
 };

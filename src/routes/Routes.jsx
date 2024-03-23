@@ -23,6 +23,7 @@ export const router = createBrowserRouter([
       {
         path: "/applied",
         element: <AppliedJobs />,
+        loader: () => fetch(`/data/jobs.json`),
       },
     ],
   },
