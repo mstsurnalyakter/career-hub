@@ -5,6 +5,7 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
 
   const [theme, setTheme] = useState('light');
+  // const [onData,setOnData] = useState("")
 
   const handleToggle = e =>{
     if (e.target.checked) {
