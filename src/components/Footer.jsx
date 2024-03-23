@@ -1,4 +1,5 @@
-
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="px-4 divide-y bg-gradient-to-r from-blue-50 to-purple-50">
@@ -19,8 +20,8 @@ const Footer = () => {
                 <path d="M18.266 26.068l7.839-7.854 4.469 4.479c1.859 1.859 1.859 4.875 0 6.734l-1.104 1.104c-1.859 1.865-4.875 1.865-6.734 0zM30.563 2.531l-1.109-1.104c-1.859-1.859-4.875-1.859-6.734 0l-6.719 6.734-6.734-6.734c-1.859-1.859-4.875-1.859-6.734 0l-1.104 1.104c-1.859 1.859-1.859 4.875 0 6.734l6.734 6.734-6.734 6.734c-1.859 1.859-1.859 4.875 0 6.734l1.104 1.104c1.859 1.859 4.875 1.859 6.734 0l21.307-21.307c1.859-1.859 1.859-4.875 0-6.734z"></path>
               </svg>
             </div>
-            <span className="self-center text-2xl font-semibold">
-              Brand name
+            <span className="bg-gradient-to-r self-center text-3xl font-bold from-primary via-purple-600 to-pink-300 bg-300% text-transparent bg-clip-text animate-gradient">
+              CareerHub
             </span>
           </a>
         </div>
@@ -89,9 +90,26 @@ const Footer = () => {
             <div className="uppercase text-gray-50">Social media</div>
             <div className="flex justify-start space-x-3">
               <a
+                className="text-2xl"
+                href="https://www.linkedin.com/in/mst-surnaly-akter/"
+                target="_blank"
                 rel="noopener noreferrer"
-                href="#"
+              >
+                <FaLinkedinIn />
+              </a>
+              <a
+                className="text-2xl"
+                href="https://github.com/mstsurnalyakter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
+              <a
+                rel="noopener noreferrer"
+                href="https://web.facebook.com/mstsurnalyakter"
                 title="Facebook"
+                target="_blank"
                 className="flex items-center p-1"
               >
                 <svg
@@ -105,7 +123,8 @@ const Footer = () => {
               </a>
               <a
                 rel="noopener noreferrer"
-                href="#"
+                target="_blank"
+                href="https://twitter.com/mstsurnalyakter"
                 title="Twitter"
                 className="flex items-center p-1"
               >
@@ -119,7 +138,8 @@ const Footer = () => {
               </a>
               <a
                 rel="noopener noreferrer"
-                href="#"
+                target="_blank"
+                href="https://www.instagram.com/mstsurnalyakte/"
                 title="Instagram"
                 className="flex items-center p-1"
               >
@@ -141,6 +161,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
-export default Footer
+export default Footer;

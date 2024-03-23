@@ -20,7 +20,7 @@ const JobCategory = () => {
  console.log(categories);
 
   return (
-    <section className="py-6 sm:py-12 mb-32">
+    <section className="py-6 mb-4">
       <div className="container p-6 mx-auto space-y-8">
         <div className="space-y-2 text-center">
           <h2 className="text-3xl font-bold">Job Category List</h2>

@@ -2,7 +2,7 @@
 import userImage from "../assets/images/user.png";
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-r from-blue-50 to-purple-50 w-full mb-32">
+    <section className="bg-gradient-to-r from-blue-50 to-purple-50 w-full mb-10">
       <div className="container flex flex-col justify-center p-6  mx-auto lg:pt-10  lg:pb-1 lg:flex-row lg:justify-between">
         <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
           <h1 className="text-5xl font-bold leading-none sm:text-6xl">
